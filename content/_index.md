@@ -1,8 +1,7 @@
-\---
+---
 
-title: "Home"
+title: "Mikey Guinness"
 
 image: "webheadmg.png"
 
-\---
-
+---
