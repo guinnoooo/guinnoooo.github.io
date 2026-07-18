@@ -12,16 +12,16 @@ theme = "mg-hugo-theme"
   animateStyle = "animated zoomIn fast"
 
   [[params.navlinks]]
-  name = "about/"
-  url = "about/"
+  name = "About"
+  url = "/about/"
 
-  [[params.navlinks]]
-  name = "posts/"
-  url = "posts/"
+[[params.navlinks]]
+  name = "Projects"
+  url = "/projects/"
 
-  [[params.navlinks]]
-  name = "photos/"
-  url = "photos/"
+[[params.navlinks]]
+  name = "Blog"
+  url = "/blog/"
 
 
 [markup]
