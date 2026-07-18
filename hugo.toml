@@ -22,3 +22,9 @@ theme = "mg-hugo-theme"
   [[params.navlinks]]
   name = "photos/"
   url = "photos/"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
