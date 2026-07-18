@@ -28,7 +28,9 @@ and even a philosophy module.
 
 </details>
 
-- 📄 [Read my Dissertation](/files/markovchains-mguinness.pdf)
+<br>
+
+<a href="/files/markovchains-mguinness.pdf" target="_blank" rel="noopener">📄 Read my Dissertation</a>
 
 <small style="color: grey;">If you would like to view full copy of my HEAR (Higher Education Achievement Report), please contact me directly.</small>
 
