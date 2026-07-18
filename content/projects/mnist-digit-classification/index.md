@@ -2,7 +2,7 @@
 
 title: "Machine Learning: MNIST Digit Classification"
 
-date: 2024-12-20
+date: 2025-05-13
 
 draft: false
 
@@ -10,7 +10,7 @@ slug: "mnist-digit-classification"
 
 ---
 
-Compared 6 classification models, from Logistic Regression to CNNs, to predict handwritten digits from the MNIST dataset.
+Comparison of 6 classification models, from Logistic Regression to CNNs, to predict handwritten digits from the MNIST dataset.
 
 <!--more-->
 
