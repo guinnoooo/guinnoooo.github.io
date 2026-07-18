@@ -1,6 +1,6 @@
 ---
 title: "Machine Learning: Wine Quality Analysis"
-date: 2026-07-18
+date: 2024-11-11
 draft: false
 slug: "wine-quality"
 ---
@@ -25,5 +25,5 @@ Random Forest was the best model in this scenario, with the lowest MSE (0.360), 
 
 ## Downloads
 
-- 📓 [Download the Notebook (.ipynb)](/files/project-1-notebook.ipynb)
-- 📄 [Download the Full Report (.pdf)](/files/project-1-report.pdf)
+<a href="/files/winequality.ipynb" download>📓 Download the Notebook (.ipynb)</a><br>
+<a href="/files/winequality.pdf" download>📄 Download the Full Report (.pdf)</a>
