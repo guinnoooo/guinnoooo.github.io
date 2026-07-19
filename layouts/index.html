@@ -16,6 +16,9 @@ Hey, I'm Mikey. Data analysis is my main thing, but I love exploring any coding 
             </p>
         </div>
     {{ end }}
+    {{ if gt (len .Pages) 3 }}
+    <p><a href="{{ .Permalink }}">See more projects →</a></p>
+    {{ end }}
 {{ end }}
 </div>
 <h1>Latest blog posts</h1>
@@ -29,6 +32,9 @@ Hey, I'm Mikey. Data analysis is my main thing, but I love exploring any coding 
                 {{ .Summary }}
             </p>
         </div>
+    {{ end }}
+    {{ if gt (len .Pages) 3 }}
+    <p><a href="{{ .Permalink }}">See more posts →</a></p>
     {{ end }}
 {{ end }}
 </div>

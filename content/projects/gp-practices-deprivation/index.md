@@ -66,4 +66,4 @@ Data covers **169 GP practices across NHS South Yorkshire ICB** (Barnsley, Donca
 <a href="/files/deprivationtable.py" download>🐍 Deprivation Table Builder (deprivationtable.py)</a><br>
 <a href="/files/analysis_base.csv" download>📁 Trimmed and Sorted Dataset (analysis_base.csv)</a>
 
-*A full write-up of this will be available shortly in a blog post*
+*A full write-up discussing these findings in more depth is available on my [blog](/blog/gp-deprivation-writeup/).*
