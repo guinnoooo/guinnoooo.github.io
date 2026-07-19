@@ -15,15 +15,15 @@ GP access and health inequality come up constantly in public discussion, but as 
 - Gave a result that was meaningful and based on solid mathematics.
 - Combined SQL, Python, and Power BI in one project, similar to a real working environment.
 
-The question I chose to explore was how does deprivation affect how many appointments GP practices deliver, and how likely patients are to attend them?
+The question I chose to explore was how does deprivation affect how many appointments GP practices deliver, and how likely patients are to attend them.
 
 ## Data Sources & SQL Cleaning
 The data sources I used are talked about in the project post itself (along with download links for anyone curious), but it was a combination of two NHS datasets, and then one dataset from ONS and gov.uk respectively. This covered all the bases I needed of deprivation scores, locations, and GP data.
 
 The first problem I spotted came while I was cleaning and combining the data using SQL. Carrfield Medical Centre (C88082) appeared twice in the practice reference data, identical in every column except SUPPLIER, where one row said EMIS, the other EMIS/ARCHVALE. Almost certainly a mid-period clinical system migration recorded as two separate states (the reason isn't relevant however, more that I noticed it).
 
-The second problem was that of a missing month. March 2026 appointment data simply wasn't published by NHS England (unless I am missing something), so I had to run samples from November to May but exclude March. Once again though, for my work this didn't really matter, as I'm not looking at time related trends.
-The final data combing issue was with the postcodes. My 169 practices only resolve to 154 unique postcodes, which meant several practices operate out of shared health centre buildings (or just happen to be in the same postcode). This meant the postcode-to-deprivation join has some duplicate deprivation values, but this is fine and is not an issue.
+The second problem was that of a missing month. March 2026 appointment data simply wasn't published by NHS England (unless I am missing something), so I had to run samples from November to May but exclude March. Once again though, for my work this didn't really matter, as I'm not looking at time-related trends.
+The final data inspection issue was with the postcodes. My 169 practices only resolve to 154 unique postcodes, which meant several practices operate out of shared health centre buildings (or just happen to be in the same postcode). This meant the postcode-to-deprivation join has some duplicate deprivation values, but this is fine and is not an issue.
 
 ## Making the Database
 

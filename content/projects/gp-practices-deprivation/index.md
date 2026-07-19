@@ -44,7 +44,7 @@ Data covers **169 GP practices across NHS South Yorkshire ICB** (Barnsley, Donca
 
 **DNA (missed appointment) rate showed a moderate, statistically significant relationship** — practices in more deprived areas see notably higher rates of missed appointments. This suggests deprivation in South Yorkshire may affect patients' ability to *attend* booked appointments more than it affects the *volume* of care on offer. The reasons for this are talked about more in my blog post, but suggests bigger issues are things such as inflexibility at work and access to transport.
 
-![111](southyork1.png)
+![Power BI collection of visualisations](southyork1.png)
 *Power BI collection of visualisations*
 
 <img src="southyork2.png" alt="Power BI Visualisation of DNA vs IMD Decile excluding the Wickersley outlier." style="max-width: 60%; display: block; margin: 0;">
