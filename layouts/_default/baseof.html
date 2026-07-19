@@ -65,24 +65,19 @@
     (function() {
       const html = document.documentElement;
       const stored = localStorage.getItem('theme');
-      if (stored === 'dark') html.classList.add('force-dark');
-      if (stored === 'light') html.classList.add('force-light');
+
+      if (stored === 'light') {
+        html.classList.add('force-light');
+      } else {
+        // default to dark if no preference stored, or if 'dark' was stored
+        html.classList.add('force-dark');
+      }
 
       document.getElementById('theme-toggle').addEventListener('click', function() {
         const isDark = html.classList.contains('force-dark');
         const isLight = html.classList.contains('force-light');
 
-        if (!isDark && !isLight) {
-          // currently following system — force to opposite of system preference first click
-          const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          if (systemDark) {
-            html.classList.add('force-light');
-            localStorage.setItem('theme', 'light');
-          } else {
-            html.classList.add('force-dark');
-            localStorage.setItem('theme', 'dark');
-          }
-        } else if (isDark) {
+        if (isDark) {
           html.classList.remove('force-dark');
           html.classList.add('force-light');
           localStorage.setItem('theme', 'light');
