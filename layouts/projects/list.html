@@ -1,0 +1,87 @@
+{{ define "main" }}
+<h1>{{ .Page.Title }}</h1>
+<br/>
+{{ .Content }}
+
+<input type="text" id="project-search" placeholder="Search projects..." style="width:100%; margin-bottom:1rem; padding:6px;">
+
+<div id="filter-buttons" style="margin-bottom:1.5rem;">
+  <button class="filter-btn active" data-category="all">All</button>
+  {{ $categories := slice }}
+  {{ range sort .Pages "Date" "desc" }}
+    {{ $parts := split .Title ":" }}
+    {{ if gt (len $parts) 1 }}
+      {{ $category := trim (index $parts 0) " " }}
+      {{ $categories = $categories | append $category }}
+    {{ end }}
+  {{ end }}
+  {{ range ($categories | uniq) }}
+    <button class="filter-btn" data-category="{{ . }}">{{ . }}</button>
+  {{ end }}
+</div>
+
+<div class="posts-list" id="projects-list">
+{{ range sort .Pages "Date" "desc" }}
+    {{ if not .Params.private }}
+        {{ $parts := split .Title ":" }}
+        {{ $category := "" }}
+        {{ if gt (len $parts) 1 }}
+          {{ $category = trim (index $parts 0) " " }}
+        {{ end }}
+        <div class="post" data-category="{{ $category }}" data-title="{{ .Title | lower }}" data-summary="{{ .Summary | plainify | lower }}">
+            <p>
+                <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
+                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+                {{ .Summary }}
+            </p>
+        </div>
+    {{ end }}
+{{ end }}
+</div>
+
+<p id="no-results" style="display:none;">No projects match your search.</p>
+
+<script>
+(function() {
+  const searchInput = document.getElementById('project-search');
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const posts = document.querySelectorAll('#projects-list .post');
+  const noResults = document.getElementById('no-results');
+  let activeCategory = 'all';
+
+  function applyFilters() {
+    const searchTerm = searchInput.value.toLowerCase();
+    let visibleCount = 0;
+
+    posts.forEach(post => {
+      const category = post.getAttribute('data-category');
+      const title = post.getAttribute('data-title');
+      const summary = post.getAttribute('data-summary');
+
+      const matchesCategory = activeCategory === 'all' || category === activeCategory;
+      const matchesSearch = title.includes(searchTerm) || summary.includes(searchTerm);
+
+      if (matchesCategory && matchesSearch) {
+        post.style.display = '';
+        visibleCount++;
+      } else {
+        post.style.display = 'none';
+      }
+    });
+
+    noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+  }
+
+  searchInput.addEventListener('input', applyFilters);
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      activeCategory = this.getAttribute('data-category');
+      applyFilters();
+    });
+  });
+})();
+</script>
+{{ end }}

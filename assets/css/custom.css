@@ -131,3 +131,30 @@ html.force-light {
 .footer #theme-toggle {
   margin-left: auto;
 }
+
+
+.filter-btn {
+  background: none;
+  border: 1px solid var(--font-color);
+  color: var(--font-color);
+  padding: 4px 12px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.filter-btn.active {
+  background: var(--primary-color);
+  color: var(--invert-font-color);
+  border-color: var(--primary-color);
+}
+
+#project-search {
+  background: var(--background-color);
+  color: var(--font-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  font: inherit;
+}
