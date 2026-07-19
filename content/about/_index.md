@@ -57,11 +57,3 @@ time in the Peak District, where I grew up (especially if I'm with my lovely fia
     <figcaption>Me and Freya!</figcaption>
   </figure>
 </div>
-
-## Contact
-
-Feel free to reach out!
-
-- 💼 [LinkedIn](https://www.linkedin.com/in/mikey-guinness-692bbb37b/)
-- ✉️ [Email](mailto:mmg.guinness@gmail.com)
-- 📸 [Instagram](https://instagram.com/guinnessmikey)

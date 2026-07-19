@@ -125,11 +125,15 @@ html.force-light {
 .footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.footer #theme-toggle {
-  margin-left: auto;
+.footer-links div {
+  margin-bottom: 4px;
+}
+
+.footer-links div:last-child {
+  margin-bottom: 0;
 }
 
 
@@ -157,4 +161,8 @@ html.force-light {
   border: 1px solid var(--secondary-color);
   border-radius: 4px;
   font: inherit;
+}
+
+.min-height-page {
+  min-height: 60vh;
 }
