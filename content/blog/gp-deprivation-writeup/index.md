@@ -4,7 +4,7 @@ date: 2026-07-19
 draft: false
 slug: "gp-deprivation-writeup"
 ---
-A deeper look at my South Yorkshire GP analysis — why appointment access stayed flat across deprivation levels, but DNA rates didn't, and what that might actually mean.
+A deeper look at my South Yorkshire GP analysis. Why appointment access stayed flat across deprivation levels, but DNA rates didn't, and what that might actually mean.
 <!--more-->
 
 ## Why this project?
