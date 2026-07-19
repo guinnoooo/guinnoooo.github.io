@@ -1,5 +1,5 @@
 ---
-title: "Why Do More Deprived Areas Miss More GP Appointments?"
+title: "Why Do People From More Deprived Areas Miss More GP Appointments?"
 date: 2026-07-19
 draft: false
 slug: "gp-deprivation-writeup"

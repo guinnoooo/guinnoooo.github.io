@@ -23,6 +23,10 @@ theme = "mg-hugo-theme"
   name = "Blog"
   url = "/blog/"
 
+  [[params.navlinks]]
+  name = "Contact"
+  url = "/contact/"
+
 
 [markup]
   [markup.goldmark]
