@@ -12,6 +12,8 @@
     --display-h1-decoration: 1;
 }
 
+
+
 html.force-dark {
   --background-color: #222225;
   --font-color: #e8e9ed;
