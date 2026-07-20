@@ -33,6 +33,9 @@
     {{- partial "header.html" . -}}
 </head>
 <body class="terminal">
+  <div id="boot-screen">
+    <pre id="boot-text"></pre>
+  </div>
     <div class="container">
         <div class="terminal-nav">
           <header class="terminal-logo">
@@ -85,6 +88,63 @@
         }
       });
     })();
+  </script>
+  <script>
+  (function() {
+    const bootScreen = document.getElementById('boot-screen');
+    const bootText = document.getElementById('boot-text');
+    const alreadyBooted = sessionStorage.getItem('booted');
+
+    if (alreadyBooted) {
+      bootScreen.style.display = 'none';
+      return;
+    }
+
+    document.body.classList.add('booting');
+
+    const lines = [
+      "$ whoami",
+      "mikey_guinness",
+      "$ ./launch_portfolio.sh",
+      "Connecting...",
+      "Done."
+    ];
+
+    let lineIndex = 0;
+    let charIndex = 0;
+    let currentText = "";
+
+    function typeNextChar() {
+      if (lineIndex >= lines.length) {
+        sessionStorage.setItem('booted', 'true');
+        setTimeout(function() {
+          bootScreen.classList.add('hidden');
+          document.body.classList.remove('booting');
+          setTimeout(function() {
+            bootScreen.style.display = 'none';
+          }, 400);
+        }, 300);
+        return;
+      }
+
+      const line = lines[lineIndex];
+
+      if (charIndex < line.length) {
+        currentText += line[charIndex];
+        bootText.textContent = currentText;
+        charIndex++;
+        setTimeout(typeNextChar, 15);
+      } else {
+        currentText += "\n";
+        bootText.textContent = currentText;
+        lineIndex++;
+        charIndex = 0;
+        setTimeout(typeNextChar, 120);
+      }
+    }
+
+    typeNextChar();
+  })();
   </script>
   </body>
 </html>
