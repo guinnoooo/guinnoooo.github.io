@@ -39,7 +39,7 @@
             <div class="logo terminal-prompt">
               {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
               {{ $.Scratch.Add "path" .Site.BaseURL }}
-              <a href="{{ .Site.BaseURL }}" class="no-style {{ with .Site.Params.TitleCutting }}site-name{{ end }}">{{ .Site.Title }}</a>:~#
+              <a href="{{ .Site.BaseURL }}" class="no-style {{ with .Site.Params.TitleCutting }}site-name{{ end }}">{{ .Site.Title }}</a>:~$
               {{ range $index, $element := split $url "/" }}{{ $.Scratch.Add "path" $element }}{{ if ne $element "" }}<a href='{{ $.Scratch.Get "path" | absURL }}'>{{ . }}</a>/{{ $.Scratch.Add "path" "/" }}{{ end }}{{ end }}
             </div></header>
             <nav class="terminal-menu">
@@ -69,14 +69,11 @@
       if (stored === 'light') {
         html.classList.add('force-light');
       } else {
-        // default to dark if no preference stored, or if 'dark' was stored
         html.classList.add('force-dark');
       }
 
       document.getElementById('theme-toggle').addEventListener('click', function() {
         const isDark = html.classList.contains('force-dark');
-        const isLight = html.classList.contains('force-light');
-
         if (isDark) {
           html.classList.remove('force-dark');
           html.classList.add('force-light');
@@ -88,6 +85,6 @@
         }
       });
     })();
-    </script>
+  </script>
   </body>
 </html>
