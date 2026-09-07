@@ -10,7 +10,6 @@ Hey, I'm Mikey. Data analysis is my main thing, but I love exploring any project
     {{ range first 3 (sort .Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
         <div class="post">
             <p>
-                <div class="date">{{ .Date | time.Format ":date_medium" }}</div>
                 <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
                 {{ .Summary }}
             </p>
@@ -27,7 +26,6 @@ Hey, I'm Mikey. Data analysis is my main thing, but I love exploring any project
     {{ range first 3 (sort .Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
         <div class="post">
             <p>
-                <div class="date">{{ .Date | time.Format ":date_medium" }}</div>
                 <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
                 {{ .Summary }}
             </p>

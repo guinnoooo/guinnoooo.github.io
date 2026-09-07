@@ -30,7 +30,6 @@
         {{ end }}
         <div class="post" data-category="{{ $category }}" data-title="{{ .Title | lower }}" data-summary="{{ .Summary | plainify | lower }}">
             <p>
-                <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
                 <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
                 {{ .Summary }}
             </p>

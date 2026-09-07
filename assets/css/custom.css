@@ -168,6 +168,12 @@ html.force-light {
   min-height: 60vh;
 }
 
+/* Dates removed from project/blog listings and the homepage;
+   the theme reserved a left column for them, so reclaim it. */
+.posts-list {
+  padding-left: 0 !important;
+}
+
 #boot-screen {
   position: fixed;
   top: 0;
