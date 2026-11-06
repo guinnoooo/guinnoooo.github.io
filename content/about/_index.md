@@ -5,12 +5,13 @@ title = 'About'
 
 ## Hey! I'm Mikey.
 
-I'm a recent graduate from the University of Sheffield, where I studied for my
+
+I'm a Data Engineer working for the University of Sheffield's Data Connect team, where I help researchers access secure healthcare data that is vital for their ground-breaking research.
+
+
+I graduated from the University of Sheffield also, where I studied for my
 Master's in Mathematics (MMath to be specific). I spend my free time making
-all sorts of data projects, and my ambition is always to do something meaningful
-with my maths skills. Whether that be data analysis, intelligence,
-cybersecurity, statistics or anything maths related, if it matters, I
-want to be a part of it!
+all sorts of other projects and tasks, with everything tying back to my love for healthcare, and for meaningful data work.
 
 I made this site to track my projects, but also my life. What I'm learning,
 what I'm doing and as a collection of the things I'm proud of.

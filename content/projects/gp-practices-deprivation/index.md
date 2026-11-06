@@ -1,5 +1,5 @@
 ---
-title: "Data Analysis: South Yorkshire GP Practices & Deprivation"
+title: "Data Engineering: South Yorkshire GP Practices & Deprivation"
 date: 2026-07-19
 draft: false
 slug: "gp-practices-deprivation"
