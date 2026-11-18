@@ -7,10 +7,6 @@ slug: "movie-map"
 A 2-D interactive map of 40,000 films and documentaries, grouped by similarity using 626 dimensional vectors, UMAP and HDBSCAN.
 <!--more-->
 
-## View the Project
-
-<a href="https://mikeyguinness.com/movies" target="_blank" rel="noopener">🎬 View the map here -></a>
-
 ## How it was built
 
 The pipeline has four stages, three small python scripts feeding each other, and one html file.
