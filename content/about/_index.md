@@ -33,8 +33,6 @@ and even a philosophy module.
 
 <a href="/files/markovchains-mguinness.pdf" target="_blank" rel="noopener">📄 Read my Dissertation</a>
 
-<small style="color: grey;">If you would like to view full copy of my HEAR (Higher Education Achievement Report), please contact me directly.</small>
-
 ## Personal Life
 
 I have a variety of hobbies I enjoy spending my free time doing. The most
